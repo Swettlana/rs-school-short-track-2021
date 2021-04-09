@@ -19,7 +19,7 @@ function getCommonCharacterCount(str1, str2) {
 
       str2 = str2.replace(str2[index], '');
       str1 = str1.replace(str1[i], '');
-      i = i - 1;
+      i -= 1;
     }
   }
   return count;
