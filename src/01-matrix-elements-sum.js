@@ -19,12 +19,12 @@ function getMatrixElementsSum(arr) {
   // считаем сколько всего стобцов (матрица прямоуг, берем любой эл-нт)
   const n = arr[0].length;
   // элементы первой строки никогда не будут по 0, можно сразу посчитать их сумму
-  for (j = 0; j < n; j++) {
+  for (let j = 0; j < n; j++) {
     sum += arr[0][j];
   }
   // проходимся по столбцам, а внутри по строкам ниже первой
   for (let j = 0; j < n; j++) {
-    for (i = 1; i < arr.length; i++) {
+    for (let i = 1; i < arr.length; i++) {
       if (arr[i - 1][j] !== 0) {
         sum += arr[i][j];
       }
