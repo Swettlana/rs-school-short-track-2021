@@ -12,13 +12,15 @@
 function getCommonCharacterCount(str1, str2) {
   let count = 0;
   let index;
-  for (let i = 0; i < str1.length; i++) {
-    if (str2.includes(str1[i])) {
+  let str = str1;
+  let STR = str2;
+  for (let i = 0; i < str.length; i++) {
+    if (STR.includes(str[i])) {
       count++;
-      index = str2.indexOf(str1[i]);
-      let elem = str2[index];
-      str2 = str2.replace(elem, '');
-      str1 = str1.replace(str1[i], '');
+      index = STR.indexOf(str[i]);
+      const elem = STR[index];
+      STR = STR.replace(elem, '');
+      str = str.replace(str[i], '');
       i -= 1;
     }
   }
