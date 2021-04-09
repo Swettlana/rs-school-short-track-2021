@@ -16,8 +16,8 @@ function getCommonCharacterCount(str1, str2) {
     if (str2.includes(str1[i])) {
       count++;
       index = str2.indexOf(str1[i]);
-
-      str2 = str2.replace(str2[index], '');
+      let elem = str2[index];
+      str2 = str2.replace(elem, '');
       str1 = str1.replace(str1[i], '');
       i -= 1;
     }
