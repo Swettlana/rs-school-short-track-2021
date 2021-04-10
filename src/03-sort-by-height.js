@@ -10,16 +10,16 @@
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
 function sortByHeight(arr) {
-  let array = arr;
+  const array = arr;
   // создаем массив из индексов элементо "-1"
-  let arrIndex = [];
+  const arrIndex = [];
   for (let i = 0; i < array.length; ++i) {
     if (array[i] === -1) {
       arrIndex.push(i);
     }
   }
-  //новый массив без -1
-  let arrNew = [];
+  // новый массив без -1
+  const arrNew = [];
   for (let z = 0; z < array.length; z++) {
     if (array[z] !== -1) {
       arrNew.push(array[z]);
