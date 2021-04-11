@@ -23,8 +23,8 @@
  */
 function minesweeper(matrix) {
   const rez = [];
-  let n = matrix.length;
-  let m = matrix[0].length;
+  const n = matrix.length;
+  const m = matrix[0].length;
   for (let i = 0; i < n; i++) {
     for (let j = 0; j < m; j++) {
       if (matrix[i][j]) {
@@ -38,7 +38,7 @@ function minesweeper(matrix) {
                 count++;
               }
             } catch (e) {
-              continue;
+              // ничего не происходит
             }
           }
         }
