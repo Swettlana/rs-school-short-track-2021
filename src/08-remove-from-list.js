@@ -24,14 +24,14 @@ function removeKFromList(l, k) {
       if (list.next) {
         list.value = list.next.value;
         list.next = list.next.next;
-        continue;
       } else {
         list = null;
       }
+    } else {
+      list = list.next;
     }
-    list = list.next;
   }
-  return list;
+  return l;
 }
 
 module.exports = removeKFromList;
